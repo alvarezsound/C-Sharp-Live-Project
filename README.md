@@ -11,7 +11,7 @@ After completing the C# and .NET course, I participated in a two-week sprint wor
 
 
 ## Create Entity Model and CRUD pages
-My first assigned story from the client was to create a model for their rental items and then scaffold the CRUD pages in order for them to easily manage their data Utilzing ASP.NET MVC and Entity Framework, I was able to create an entity model using Code First so that the client can save data to the database. I then was able to scaffold the model to create the CRUD pages. This task was easily done thanks to the Entity Framework.
+My first assigned story from the client was to create a model for their rental items and then scaffold the CRUD pages in order for them to easily manage their data. Utilzing ASP.NET MVC and Entity Framework, I was able to create an entity model using Code First so that the client can save data to the database. I then was able to scaffold the model to create the CRUD pages. This task was easily done thanks to the Entity Framework.
 
 The Model
 ```cs
@@ -29,7 +29,7 @@ public class RentalItem
 ```
 
 ## Styling the Create and Edit Pages
-The next task I was given was to style the Create and Edit Pages. The client had a strict color scheme to stick to as well as a rough page layout as a guide, but,ultimately it was up to me to iron out the details. Below is a code snippit of all the custom CSS that I used for my portion of the application.
+The next task I was given was to style the Create and Edit Pages. The client had a strict color scheme to stick to as well as a rough page layout as a guide, but, ultimately it was up to me to iron out the details. Below is a code snippit of all the custom CSS that I used for my portion of the application.
 
 Rent.css
 ```cs
