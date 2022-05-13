@@ -6,7 +6,8 @@ After completing the C# and .NET course, I participated in a two-week sprint wor
 - [Create Entity Model and CRUD pages](#Create-Entity-Model-and-CRUD-pages)
 - [Styling the Create and Edit Pages](#Styling-the-Create-and-Edit-Pages)
 - [Photo Storage and Retrieval](#Photo-Storage-and-Retrieval)
-- [Styling the Index page](#Stylin-the-Index-page)
+- [Styling the Index Page](#Styling-the-Index-Page)
+- [Styling the Details and Delete Pages](#Styling-the-Details-and-Delete-Pages)
 - [Index Page Search Feature](#Index-Page-Search-Feature)
 
 
@@ -41,9 +42,9 @@ Rent.css
 
 ## Photo Storage and Retrieval
 
-## Styling the Index page
+## Styling the Index Page
 
-## Sytling the Details and Delete Pages
+## Styling the Details and Delete Pages
 
 ### Details
 
