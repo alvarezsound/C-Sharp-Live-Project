@@ -12,7 +12,7 @@ After completing the C# and .NET course, I participated in a two-week sprint wor
 
 
 ## Create Entity Model and CRUD pages
-My first assigned story from the client was to create a model for their rental items and then scaffold the CRUD pages in order for them to easily manage their data. Utilzing ASP.NET MVC and Entity Framework, I was able to create an entity model using Code First so that the client can save data to the database. I then was able to scaffold the model to create the CRUD pages. This task was easily done thanks to the Entity Framework.
+My first assigned story from the client was to create a model for their rental items and then scaffold the CRUD pages in order for them to easily manage their data. Utilzing ASP.NET MVC and Entity Framework, I was able to create an entity model using Code First so that the client can save data to the database. I utilized DataType.Date property to get the date component from DateTime. I then was able to scaffold the model to create the CRUD pages. This task was easily done thanks to the Entity Framework.
 
 The Model
 ```cs
