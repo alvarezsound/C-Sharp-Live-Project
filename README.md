@@ -29,7 +29,7 @@ public class RentalItem
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? ReturnDate { get; set; }
-        
+
         public Byte[] ItemPhoto { get; set; }
     }
 ```
@@ -60,7 +60,7 @@ It was requested that the edit page was styled almost identical to the create pa
 [image of edit page]
 
 ## Photo Storage and Retrieval
-The next task, was to add photo storage and retrieval functionality to the RentalItem model. This allows users to upload photo files from their file system; then in the controller, the uploaded image is converted into a byte array (byte[]) and stored in the database. The byte[] representing the photo is able to be retrieved from the database, and the converted back into an image where it can be displayed in the view.
+The next assigned story, was to add photo storage and retrieval functionality to the RentalItem model. This allows users to upload photo files from their file system; then in the controller, the uploaded image is converted into a byte array (byte[]) and stored in the database. The byte[] representing the photo is able to be retrieved from the database, and the converted back into an image where it can be displayed in the view.
 
 First, I created a method in the RentalItem Controller that takes in the uploaded photo and converts that photo into a byte[].
 
@@ -70,7 +70,7 @@ First, I created a method in the RentalItem Controller that takes in the uploade
 
 Next, I added file input fields to the Create and Edit views, so the image can be uploaded.
 
-[add image example]
+[Image of edit page photo area]
 
 Within the Create and Edit Controller methods, I created a method that converts the uploaded image to a byte[] and assigns the byte[] to the database.
 
@@ -91,7 +91,7 @@ Finally, I used the DisplayImage method to display the photos on the index and C
 ```
 
 ## Styling the Index Page
-The next task was a total design overhall of the index page. I added Bootstrap cards to the index view that display each individual rental item in a bootstrap grid. The client requested adding and designing a large create button that directs the user to the create page. They also wanted an overlay effect on the item cards where edit and delete buttons appear on hover. I was able to add extra on-hover features like opacity and image scaling. Finally, they wanted each card to be clickable and direct the user to the rental items details view.
+The next story was a total design overhall of the index page. I added Bootstrap cards to the index view that display each individual rental item in a bootstrap grid. The client requested adding and designing a large create button that directs the user to the create page. They also wanted an overlay effect on the item cards where edit and delete buttons appear on hover. I was able to add extra on-hover features like opacity and image scaling. Finally, they wanted each card to be clickable and direct the user to the rental items details view.
 
 [Show gif of overlay and button effects and index design]
 
@@ -109,9 +109,9 @@ Finally, the last pages (details and delete) in the app needed to be styled. I w
 [image of delete page]
 
 ## Index Page Search Feature
-As a final feature, the client wanted to add a search bar to the index page that allows the user to search rental items by name or a matching word/phrase in the item description. The items that don't match the search are hidden from view and if there are no items that match the search, the section itself is hidden. After turning this in, they had a new idea to add an additional button that resets the form/page.
+As a final feature, the client wanted to add a search bar to the index page that allows the user to search rental items by name or a matching word/phrase in the item description. The items that don't match the search are hidden from view and if there are no items that match the search, the section itself is hidden. After turning this in, they decided they wanted to add an additional button that resets the form/page.
 
-This was done with a simple line of code added to the index method in the controller followed by adding an input and buttons to the index page.
+This feature was done with a simple line of code inside the index method in the controller. Then I added an input and buttons to the index page.
 
 ```cs
 
