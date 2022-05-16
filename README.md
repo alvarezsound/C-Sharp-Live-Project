@@ -331,7 +331,7 @@ Finally, I used the DisplayImage method to display the photos on the index and C
 ## Styling the Index Page
 The next story was a total design overhall of the index page. I added Bootstrap cards to the index view that display each individual rental item in a bootstrap grid. The client requested adding and designing a large create button that directs the user to the create page. They also wanted an overlay effect on the item cards where edit and delete buttons appear on hover. I was able to add extra on-hover features like opacity and image scaling. Finally, they wanted each card to be clickable and direct the user to the rental items details view.
 
-[Show gif of overlay and button effects and index design]
+![Index Hover](/GIFs/IndexHover.gif)
 
 ## Styling the Details and Delete Pages
 Finally, the last pages (details and delete) in the app needed to be styled. I was given an overall layout request that I had to follow. They wanted these two pages to be exactly the same except for the addition of a delete button on the delete page. Later on in the sprint, I suggested a design update to these pages.
@@ -375,10 +375,10 @@ public ActionResult Index(string searchString)
 </div>
 ```
 
-[GIF of index search feature demo]
+![Index Search](/GIFs/IndexSearch.gif)
 
 ## Create Admin Role and Restrict Access
-As a final feature, the client wanted to restrict access to certain views for non admin users. This was accomplished by adding the below code to the RentalItem controller. 
+As a final feature, the client wanted to restrict access to certain views and htmml elements for non admin users. This was accomplished by adding the below code to the RentalItem controller. 
 
 ```cs
 [Authorize(Roles = "Admin")]
@@ -433,7 +433,7 @@ private void CreateRoleAndUser ()
         }
 ```
 
-Here are screenshots of the index page as a admin and non-admin to compare.
+Here are screenshots of the index page as an admin and non-admin for comparison.
 
 Admin:
 ![Index Admin](/Images/IndexAdmin.png)
