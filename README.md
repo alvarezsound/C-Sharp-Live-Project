@@ -435,8 +435,10 @@ private void CreateRoleAndUser ()
 
 Here are screenshots of the index page as a admin and non-admin to compare.
 
+Admin:
 ![Index Admin](/Images/IndexAdmin.png)
 
+Non-Admin:
 ![Index NonAdmin](/Images/IndexNonAdmin.png)
 
 ## Conclusion
