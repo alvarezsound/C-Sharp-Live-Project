@@ -384,7 +384,7 @@ As a final feature, the client wanted to restrict access to certain views for no
 [Authorize(Roles = "Admin")]
 ```
 
-To allow non-admin access to certain views, I added the below code to the top of each method that non-admin users can see.
+To allow non-admin access to certain views, I added the below code to the top of each method that non-admin users should see.
 ```cs
 [AllowAnonymous]
 ```
