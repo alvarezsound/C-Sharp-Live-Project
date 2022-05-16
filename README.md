@@ -99,7 +99,7 @@ The next story was a total design overhall of the index page. I added Bootstrap 
 ```
 
 ## Styling the Details and Delete Pages
-Finally, the last pages (details and delete) in the app needed to be styled. I was given an overall layout request that I had to follow. They wanted these two pages to be exactly the same except for the addition of a delete button on the delete page.
+Finally, the last pages (details and delete) in the app needed to be styled. I was given an overall layout request that I had to follow. They wanted these two pages to be exactly the same except for the addition of a delete button on the delete page. Later on in the sprint, I suggested a design update to these pages.
 
 ### Details
 [image of details page]
@@ -124,4 +124,6 @@ This feature was done with a simple line of code inside the index method in the 
 
 ## Conclusion
 The C# live project provided me a chance to apply all the knowledge I have accumulated during my time in the software development boot camp. I utilized AGILE/SCRUM project methodologies and gained real-world experience with version control. I participated in daily standup meetings to discuss progress and roadblocks, as well as a retrospective meeting upon completion of the app. One of the biggest things I learned from this experience is the importance of keeping my branch up to date with the master to minimize merge conflicts. I found myself very comfortable using C# and ASP.NET and I was able to get through every step effeciently, and with minimal issues. I look forward to developing these skills further and applying them!
+
+Back to [Top](#C#-Live-Project-WIP)
 
