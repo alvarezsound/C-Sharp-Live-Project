@@ -331,6 +331,7 @@ Finally, I used the DisplayImage method to display the photos on the index and C
 ## Styling the Index Page
 The next story was a total design overhall of the index page. I added Bootstrap cards to the index view that display each individual rental item in a bootstrap grid. The client requested adding and designing a large create button that directs the user to the create page. They also wanted an overlay effect on the item cards where edit and delete buttons appear on hover. I was able to add extra on-hover features like opacity and image scaling. Finally, they wanted each card to be clickable and direct the user to the rental items details view.
 
+
 ![Index Hover](/GIFs/IndexHover.gif)
 
 ## Styling the Details and Delete Pages
@@ -444,5 +445,5 @@ Non-Admin:
 ## Conclusion
 The C# live project provided me a chance to apply all the knowledge I have accumulated during my time in the software development boot camp. I utilized AGILE/SCRUM project methodologies and gained real-world experience with version control. I participated in daily standup meetings to discuss progress and roadblocks, as well as a retrospective meeting upon completion of the app. One of the biggest things I learned from this experience is the importance of keeping my branch up to date with the master to minimize merge conflicts. I found myself very comfortable using C# and ASP.NET and I was able to get through every step effeciently, and with minimal issues. I really appreciated the stories that required a lot of coding and research on my part to accomplish ([Photo retrieval](#Photo-Storage-and-Retrieval) and [Restricting access](#create-admin-role-and-restrict-access)). I look forward to developing these skills further and applying them!
 
-Back to [Top](#CSharp-Live-Project)
+Back to [top](#CSharp-Live-Project)
 
