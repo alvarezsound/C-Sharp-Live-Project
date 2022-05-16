@@ -1,4 +1,4 @@
-# CSharp Live Project
+# C``#`` Live Project
 After completing the C# and .NET course, I participated in a two-week sprint working with a small dev team. We were tasked to build an interactive website for managing the content and productions for a local theater company. The application was built using ASP.NET MVC and Entity Framework. Below is a breakdown of the individual features that I was tasked to design and implement.
 
 ## Table of Contents
