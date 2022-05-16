@@ -260,16 +260,53 @@ Next, I added file input fields to the Create and Edit views, so the image can b
 Within the Create and Edit Controller methods, I created a method that converts the uploaded image to a byte[] and assigns the byte[] to the database.
 
 ```cs
-        public byte[] GetImageFromDB(int id)
+public ActionResult Create([Bind(Include = "RentalItemId,Item,ItemDescription,PickupDate,ReturnDate,ItemPhoto")] RentalItem rentalItem, HttpPostedFileBase imageFile)
         {
-            RentalItem item = db.RentalItems.Find(id);
-            byte[] itemPhoto = item.ItemPhoto;
-            return itemPhoto;
+            if (ModelState.IsValid)
+            {
+                if (imageFile != null)
+                {
+                    rentalItem.ItemPhoto = ImageToByte(imageFile);
+                    db.RentalItems.Add(rentalItem);
+                }
+                else
+                {
+                    db.RentalItems.Add(rentalItem);
+                }
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(rentalItem);
+        }
+```
+```cs
+public ActionResult Edit([Bind(Include = "RentalItemId,Item,ItemDescription,PickupDate,ReturnDate,ItemPhoto")] RentalItem rentalItem, HttpPostedFileBase imageFile)
+        {
+            if (ModelState.IsValid)
+            {
+                if (imageFile != null)
+                {
+                    db.Entry(rentalItem).State = EntityState.Modified;
+                    rentalItem.ItemPhoto = ImageToByte(imageFile);
+                }
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(rentalItem);
         }
 ```
 
 Additionally, I had to create two methods within the controller that enable the user to retrieve the stored byte[] from the database using RentalItemId. The second method then returns the file of the converted photo to be displayed.
 
+```cs
+public byte[] GetImageFromDB(int id)
+{
+    RentalItem item = db.RentalItems.Find(id);
+    byte[] itemPhoto = item.ItemPhoto;
+    return itemPhoto;
+}
+```
 ```cs
 public ActionResult DisplayImage(RentalItem id)
         {
