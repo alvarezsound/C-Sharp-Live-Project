@@ -229,12 +229,12 @@ Rent.css
 ### Create
 For the Create page, the client wanted an overall clean design, hover and on-click effects for the form inputs, and unique buttons. I used bootstrap to easily seperate the form into two colums which I believe created a cleaner and more unique design.
 
-[image of create page]
+![Create](/Images/Create.png)
 
 ### Edit
 It was requested that the edit page was styled almost identical to the create page. The one difference was that it displayed a photo if one was added.
 
-[image of edit page]
+![Edit](/Images/Edit.png)
 
 ## Photo Storage and Retrieval
 The next assigned story, was to add photo storage and retrieval functionality to the RentalItem model. This allows users to upload photo files from their file system; then in the controller, the uploaded image is converted into a byte array (byte[]) and stored in the database. The byte[] representing the photo is able to be retrieved from the database, and the converted back into an image where it can be displayed in the view.
@@ -255,7 +255,7 @@ public byte[] ImageToByte(HttpPostedFileBase imageFile)
 
 Next, I added file input fields to the Create and Edit views, so the image can be uploaded.
 
-[Image of edit page photo area]
+![Edit Photo](/Images/EditPhoto.png)
 
 Within the Create and Edit Controller methods, I created a method that converts the uploaded image to a byte[] and assigns the byte[] to the database.
 
@@ -337,10 +337,10 @@ The next story was a total design overhall of the index page. I added Bootstrap 
 Finally, the last pages (details and delete) in the app needed to be styled. I was given an overall layout request that I had to follow. They wanted these two pages to be exactly the same except for the addition of a delete button on the delete page. Later on in the sprint, I suggested a design update to these pages.
 
 ### Details
-[image of details page]
+![Details](/Images/Details.png)
 
 ### Delete
-[image of delete page]
+![Delete](/Images/Delete.png)
 
 ## Index Page Search Feature
 The client wanted to add a search bar to the index page that allows the user to search rental items by name or a matching word/phrase in the item description. The items that don't match the search are hidden from view and if there are no items that match the search, the section itself is hidden. After turning this in, they decided they wanted to add an additional button that resets the form/page.
@@ -434,8 +434,10 @@ private void CreateRoleAndUser ()
 ```
 
 Here are screenshots of the index page as a admin and non-admin to compare.
-[Insert images of index pages to compare]
 
+![Index Admin](/Images/IndexAdmin.png)
+
+![Index NonAdmin](/Images/IndexNonAdmin.png)
 
 ## Conclusion
 The C# live project provided me a chance to apply all the knowledge I have accumulated during my time in the software development boot camp. I utilized AGILE/SCRUM project methodologies and gained real-world experience with version control. I participated in daily standup meetings to discuss progress and roadblocks, as well as a retrospective meeting upon completion of the app. One of the biggest things I learned from this experience is the importance of keeping my branch up to date with the master to minimize merge conflicts. I found myself very comfortable using C# and ASP.NET and I was able to get through every step effeciently, and with minimal issues. I really appreciated the stories that required a lot of coding and research on my part to accomplish ([Photo retrieval](#Photo-Storage-and-Retrieval) and [Restricting access](#create-admin-role-and-restrict-access)). I look forward to developing these skills further and applying them!
