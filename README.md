@@ -227,7 +227,7 @@ Rent.css
 }
 ```
 ### Create
-For the Create page, the client wanted an overall clean design, hover and on-click effects for the form inputs, and unique buttons. I used Bootstrap to separate the form into two columns, which I believe created a cleaner and more unique design.
+For the Create page, the client wanted an overall clean design, hover and on-click effects for the form inputs, and unique buttons. I used Bootstraps grid to separate the form into two columns, which I believe created a cleaner and more unique design.
 
 ![Create](/Images/Create.png)
 
@@ -335,7 +335,7 @@ The next story was a total design overhaul of the Index page. I added Bootstrap 
 ![Index Hover](/GIFs/IndexHover.gif)
 
 ## Styling the Details and Delete Pages
-To complete the project, the final pages (Details and Delete) in the app needed to be styled. I was given an overall layout request that I had to follow. The client wanted these two pages to be exactly the same except for the addition of a “delete” button on the Delete page. Later on in the sprint, I suggested a design update to these pages.
+To complete the project, the final pages (Details and Delete) in the app needed to be styled. I was given an overall layout request that I had to follow. The client wanted these two pages to be exactly the same except for the addition of a “delete” button on the Delete page. Later on in the sprint, I suggested a design update to these pages that placed the item description to the left of the photo, instead of below.
 
 ### Details
 ![Details](/Images/Details.png)
@@ -379,7 +379,7 @@ public ActionResult Index(string searchString)
 ![Index Search](/GIFs/IndexSearch.gif)
 
 ## Create Admin Role and Restrict Access
-As a final feature, the client wanted to restrict access to certain views and HTML elements for non-admin users. This was accomplished by adding the following code to the RentalItem controller:
+As a final feature, the client wanted to restrict access to certain views and HTML elements for non-admin users. This was accomplished by adding the following code to the top of the RentalItem controller:
 
 ```cs
 [Authorize(Roles = "Admin")]
