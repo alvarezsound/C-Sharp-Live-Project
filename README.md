@@ -1,5 +1,5 @@
-# CSharp Live Project
-After completing the C# and .NET course, I participated in a two-week sprint working with a small dev team. We were tasked to build an interactive website for managing the content and productions for a local theater company. The application was built using ASP.NET MVC and Entity Framework. Below is a breakdown of the individual features that I was tasked to design and implement.
+# C Sharp Live Project
+After completing the C# and .NET course, I participated in a two-week sprint working with a small dev team. We were tasked to build an interactive website for managing content and productions for a local theater company. The application was made using ASP.NET MVC and Entity Framework. Below is a breakdown of the individual features I was tasked to design and implement.
 
 ## Table of Contents
 - [Create Entity Model and CRUD pages](#Create-Entity-Model-and-CRUD-pages)
@@ -13,7 +13,7 @@ After completing the C# and .NET course, I participated in a two-week sprint wor
 
 
 ## Create Entity Model and CRUD pages
-My first assigned story from the client was to create a model for their rental items and then scaffold the CRUD pages in order for them to easily manage their data. Utilzing ASP.NET MVC and Entity Framework, I was able to create an entity model using Code First so that the client can save data to the database. I utilized DataType.Date property to get the date component from DateTime. I then was able to scaffold the model to create the CRUD pages. This task was easily done thanks to the Entity Framework.
+My first assigned story from the client was to create a model for their rental items and scaffold the CRUD pages in order easily manage their data. Utilizing ASP.NET MVC and Entity Framework, I was able to create an entity model using Code First so that the client can save data to the database. I utilized DataType.Date property to get the date component from DateTime. I was then able to scaffold the model to create the CRUD pages. This task was done quickly thanks to the Entity Framework.
 
 The Model
 ```cs
@@ -36,7 +36,7 @@ public class RentalItem
 ```
 
 ## Styling the Create and Edit Pages
-The next task I was given was to style the Create and Edit Pages. The client had a strict color scheme as well as rough page layouts to use as a guide, but, ultimately it was up to me to iron out the details of the design. Below is a code snippit of all the custom CSS that I used for my portion of the application.
+The next task I was given was to style the Create and Edit Pages. The client had a strict color scheme as well as rough page layouts to use as a guide, but ultimately, it was up to me to iron out the details of the design. Below is a code snippet of all the custom CSS used for my portion of the application.
 
 Rent.css
 ```cs
@@ -227,19 +227,19 @@ Rent.css
 }
 ```
 ### Create
-For the Create page, the client wanted an overall clean design, hover and on-click effects for the form inputs, and unique buttons. I used bootstrap to easily seperate the form into two colums which I believe created a cleaner and more unique design.
+For the Create page, the client wanted an overall clean design, hover and on-click effects for the form inputs, and unique buttons. I used Bootstrap to separate the form into two columns, which I believe created a cleaner and more unique design.
 
 ![Create](/Images/Create.png)
 
 ### Edit
-It was requested that the edit page was styled almost identical to the create page. The one difference was that it displayed a photo if one was added.
+It was requested that the Edit page be styled almost identical to the Create page. The single difference was that it displayed a photo if one had been added.
 
 ![Edit](/Images/Edit.png)
 
 ## Photo Storage and Retrieval
-The next assigned story, was to add photo storage and retrieval functionality to the RentalItem model. This allows users to upload photo files from their file system; then in the controller, the uploaded image is converted into a byte array (byte[]) and stored in the database. The byte[] representing the photo is able to be retrieved from the database, and the converted back into an image where it can be displayed in the view.
+The next assigned story was to add photo storage and retrieval functionality to the RentalItem model. This allows users to upload photo files from their file system; then, in the controller, the uploaded image is converted into a byte array (byte[]) and stored in the database. The byte[] that represents the photo can be retrieved from the database and converted back into an image to be displayed in the view.
 
-First, I created a method in the RentalItem controller that takes in the uploaded photo and converts that photo into a byte[].
+First, I created a method in the RentalItem controller that converts the uploaded photo into a byte[].
 
 ```cs
 public byte[] ImageToByte(HttpPostedFileBase imageFile)
@@ -257,7 +257,7 @@ Next, I added file input fields to the Create and Edit views, so the image can b
 
 ![Edit Photo](/Images/EditPhoto.png)
 
-Within the Create and Edit Controller methods, I created a method that converts the uploaded image to a byte[] and assigns the byte[] to the database.
+Within the Create and Edit Controller methods, I produced a method that converts the uploaded image to a byte[] and assigns the byte[] to the database.
 
 ```cs
 public ActionResult Create([Bind(Include = "RentalItemId,Item,ItemDescription,PickupDate,ReturnDate,ItemPhoto")] RentalItem rentalItem, HttpPostedFileBase imageFile)
@@ -323,19 +323,19 @@ public ActionResult DisplayImage(RentalItem id)
         }
 ```
 
-Finally, I used the DisplayImage method to display the photos on the index and CRUD pages. Here are is an example of the method being applied to the index page view.
+Finally, I used the DisplayImage method to display the photos on the index and CRUD pages. Here is an example of the method being applied to the Index page view:
 ```cs
 <img src="@Url.Action("DisplayImage", "RentalItems", new { item.RentalItemId })" alt="Rental Item Photo">
 ```
 
 ## Styling the Index Page
-The next story was a total design overhall of the index page. I added Bootstrap cards to the index view that display each individual rental item in a bootstrap grid. The client requested adding and designing a large create button that directs the user to the create page. They also wanted an overlay effect on the item cards where edit and delete buttons appear on hover. I was able to add extra on-hover features like opacity and image scaling. Finally, they wanted each card to be clickable and direct the user to the rental items details view.
+The next story was a total design overhaul of the Index page. I added Bootstrap cards to the Index view that display each individual rental item within a Bootstrap grid. The client requested that I add and design a large “create” button that directs the user to the Create page. They also wanted an overlay effect on the item cards in which “edit” and “delete” buttons would appear on hover. I was able to add extra on-hover features such as opacity and image scaling. Lastly, they wanted each card to be clickable and direct the user to the rental item’s Details view.
 
 
 ![Index Hover](/GIFs/IndexHover.gif)
 
 ## Styling the Details and Delete Pages
-Finally, the last pages (details and delete) in the app needed to be styled. I was given an overall layout request that I had to follow. They wanted these two pages to be exactly the same except for the addition of a delete button on the delete page. Later on in the sprint, I suggested a design update to these pages.
+To complete the project, the final pages (Details and Delete) in the app needed to be styled. I was given an overall layout request that I had to follow. The client wanted these two pages to be exactly the same except for the addition of a “delete” button on the Delete page. Later on in the sprint, I suggested a design update to these pages.
 
 ### Details
 ![Details](/Images/Details.png)
@@ -344,9 +344,9 @@ Finally, the last pages (details and delete) in the app needed to be styled. I w
 ![Delete](/Images/Delete.png)
 
 ## Index Page Search Feature
-The client wanted to add a search bar to the index page that allows the user to search rental items by name or a matching word/phrase in the item description. The items that don't match the search are hidden from view and if there are no items that match the search, the section itself is hidden. After turning this in, they decided they wanted to add an additional button that resets the form/page.
+The client wanted to add a search bar to the Index page that allows the user to search rental items by name or a matching word/phrase within the item’s description. The items that don't match the search are hidden from view, and if there are no items that match that search, the section itself is hidden. After submitting this, the client decided they wanted to add an additional button that resets the form/page.
 
-This feature was done with a simple line of code inside the index method in the controller. Then I added an input and buttons to the index page.
+This particular feature was done with a simple line of code inside the index method in the controller. Then I added an input and buttons to the Index page.
 
 ```cs
 public ActionResult Index(string searchString)
@@ -379,18 +379,18 @@ public ActionResult Index(string searchString)
 ![Index Search](/GIFs/IndexSearch.gif)
 
 ## Create Admin Role and Restrict Access
-As a final feature, the client wanted to restrict access to certain views and htmml elements for non admin users. This was accomplished by adding the below code to the RentalItem controller. 
+As a final feature, the client wanted to restrict access to certain views and HTML elements for non-admin users. This was accomplished by adding the following code to the RentalItem controller:
 
 ```cs
 [Authorize(Roles = "Admin")]
 ```
 
-To allow non-admin access to certain views, I added the below code to the top of each method that non-admin users should see.
+To allow non-admin access to certain views, I added the following code to the top of each method that non-admin users should see.
 ```cs
 [AllowAnonymous]
 ```
 
-In order to hide certain html elements on the pages depending if the user is an admin, I placed those elements within an if statement using Razor syntax. Here is an example:
+In order to hide certain HTML elements on the pages depending on whether or not the user is an admin, I placed those elements within an if statement using Razor syntax. Here is an example:
 ```cs
 @if (ViewContext.HttpContext.User.IsInRole("Admin"))
 {
@@ -400,7 +400,7 @@ In order to hide certain html elements on the pages depending if the user is an 
 }
 ```
 
-Finally, to create the admin role and a admin super user for testing, I added this block of code to the Startup.cs:
+Finally, to create the admin role and an admin superuser for testing, I added this block of code to the Startup.cs:
 ```cs
 private void CreateRoleAndUser ()
         {
@@ -434,7 +434,7 @@ private void CreateRoleAndUser ()
         }
 ```
 
-Here are screenshots of the index page as an admin and non-admin for comparison.
+Please compare these screenshots of the Index page when viewing as an admin versus a non-admin.
 
 Admin:
 ![Index Admin](/Images/IndexAdmin.png)
@@ -443,7 +443,8 @@ Non-Admin:
 ![Index NonAdmin](/Images/IndexNonAdmin.png)
 
 ## Conclusion
-The C# live project provided me a chance to apply all the knowledge I have accumulated during my time in the software development boot camp. I utilized AGILE/SCRUM project methodologies and gained real-world experience with version control. I participated in daily standup meetings to discuss progress and roadblocks, as well as a retrospective meeting upon completion of the app. One of the biggest things I learned from this experience is the importance of keeping my branch up to date with the master to minimize merge conflicts. I found myself very comfortable using C# and ASP.NET and I was able to get through every step efficiently and with minimal issues. I really appreciated the stories that required a lot of coding and research on my part to accomplish ([Photo retrieval](#Photo-Storage-and-Retrieval) and [restricting access](#create-admin-role-and-restrict-access)). I look forward to developing these skills further and applying them in a software development role!
+This C# live project offered a chance for me to apply all the knowledge I accumulated throughout my time in software development boot camp. I utilized AGILE/SCRUM project methodologies and gained real-world experience with version control. I participated in daily standup meetings to discuss progress and roadblocks, as well as a retrospective meeting upon completion of the app. One of the biggest things I learned is the importance of keeping my branch up to date with the master to minimize merge conflicts. I found myself very comfortable using C# and ASP.NET and was able to get through every step efficiently and with minimal issues. I really appreciated the stories that required more coding and research on my part ([Photo retrieval](#Photo-Storage-and-Retrieval) and [restricting access](#create-admin-role-and-restrict-access)). I look forward to developing these skills further and applying them in a software development role!
 
-Back to [top](#CSharp-Live-Project)
+
+Back to [top](#C-Sharp-Live-Project)
 
