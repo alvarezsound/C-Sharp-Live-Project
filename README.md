@@ -1,4 +1,4 @@
-# C Sharp Live Project
+# Csharp Live Project
 After completing the C# and .NET course, I participated in a two-week sprint working with a small dev team. We were tasked to build an interactive website for managing content and productions for a local theater company. The application was made using ASP.NET MVC and Entity Framework. Below is a breakdown of the individual features I was tasked to design and implement.
 
 ## Table of Contents
@@ -446,5 +446,5 @@ Non-Admin:
 This C# live project offered a chance for me to apply all the knowledge I accumulated throughout my time in software development boot camp. I utilized AGILE/SCRUM project methodologies and gained real-world experience with version control. I participated in daily standup meetings to discuss progress and roadblocks, as well as a retrospective meeting upon completion of the app. One of the biggest things I learned is the importance of keeping my branch up to date with the master to minimize merge conflicts. I found myself very comfortable using C# and ASP.NET and was able to get through every step efficiently and with minimal issues. I really appreciated the stories that required more coding and research on my part ([Photo retrieval](#Photo-Storage-and-Retrieval) and [restricting access](#create-admin-role-and-restrict-access)). I look forward to developing these skills further and applying them in a software development role!
 
 
-Back to [top](#C-Sharp-Live-Project)
+Back to [top](#Csharp-Live-Project)
 
